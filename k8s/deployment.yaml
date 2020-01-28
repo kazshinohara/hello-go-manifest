@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-go
+spec:
+  selector:
+    matchLabels:
+      app: hello-go
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: hello-go
+    spec:
+      containers:
+      - name: hello-go
+        image: asia.gcr.io/k8s-day/hello-go:ec701b3bd0161735cdb63343454767ed0aa61d27
+        ports:
+        - containerPort: 8080
