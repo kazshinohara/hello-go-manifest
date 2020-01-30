@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: hello-go
-  replicas: 3 
+  replicas: 2 
   template:
     metadata:
       labels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-go
-        image: asia.gcr.io/k8s-day/hello-go:30abbcdf9c2f1cfa40fcd72907bdac22b5aa1ea5
+        image: asia.gcr.io/k8s-day/hello-go:v1
         resources:
           limits:
             cpu: "500m"
